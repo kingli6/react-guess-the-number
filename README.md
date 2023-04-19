@@ -4,7 +4,7 @@
 ### A quick guide https://www.youtube.com/watch?v=Q9n2mLqXFpU
 
 #### Instructions on how to set the env up for seeing react app locally`?
-also Webpage: <link> </>
+also Webpage link:  https://kingli6.github.io/react-guess-the-number/ 
 <!-- -------------------------------------------------------------------
 ------------------------------------------------------------------------
 ----------------------------------------------------------------------------

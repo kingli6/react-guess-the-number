@@ -80,6 +80,7 @@ const Gamelogic = () => {
     setGameOver(false);
   };
   /////////////////////////////////////////////
+  console.log(number);
   return (
     <div>
       <p>-------------------------------------</p>

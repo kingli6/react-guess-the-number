@@ -1,10 +1,10 @@
 # Getting Started with Create React App
 
-###Install React
+### Install React
 
 > > npx create-react-app .
 
-###Start project locally
+### Start project locally
 
 > > npm start
 

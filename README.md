@@ -1,13 +1,10 @@
-# Getting Started with Create React App
-
-
-
 ### Start project locally
 `npm start`
 
+### A quick guide https://www.youtube.com/watch?v=Q9n2mLqXFpU
 
 #### Instructions on how to set the env up for seeing react app locally`?
-## Available Scripts
+also Webpage: <link> </>
 <!-- -------------------------------------------------------------------
 ------------------------------------------------------------------------
 ----------------------------------------------------------------------------

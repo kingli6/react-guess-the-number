@@ -1,5 +1,9 @@
 Webpage link to view the project online: https://kingli6.github.io/react-guess-the-number/
 
+
+
+<!-- -------------------------------------------------------------------
+
 #### Instructions on how to set the env up for running react app locally`?
 
 ### A quick guide to set up a new project https://www.youtube.com/watch?v=Q9n2mLqXFpU
@@ -7,10 +11,6 @@ Webpage link to view the project online: https://kingli6.github.io/react-guess-t
 ### Start project locally
 
 `npm start`
-
-<!-- -------------------------------------------------------------------
-
----
 
 In the project directory, you can run: `npm start`
 

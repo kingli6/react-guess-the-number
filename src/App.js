@@ -26,15 +26,15 @@ const Gamelogic = () => {
     switch (difficulty) {
       case "easy":
         setNumber(Math.floor(Math.random() * 10) + 1);
-        setMaxAttempts(3);
+        setMaxAttempts(4);
         break;
       case "medium":
         setNumber(Math.floor(Math.random() * 100) + 1);
-        setMaxAttempts(5);
+        setMaxAttempts(6);
         break;
       case "hard":
         setNumber(Math.floor(Math.random() * 1000) + 1);
-        setMaxAttempts(10);
+        setMaxAttempts(8);
         break;
       default:
         break;
@@ -62,7 +62,6 @@ const Gamelogic = () => {
 
       if (attempts + 1 >= maxAttempts) {
         setGameOver(true);
-        setStartGame(false);
         setMessage(
           `Ohh no.. you've reached the max attempts. The number was ${number}`
         );
@@ -139,12 +138,14 @@ const Gamelogic = () => {
           <p>{message}</p> {/*need to add a && logic?*/}
         </div>
       ) : (
-        <div>
-          <p>{message}</p>
-          <button type="button" onClick={restartGame}>
-            Play again
-          </button>
-        </div>
+        gameOver && (
+          <div>
+            <p>{message}</p>
+            <button type="button" onClick={restartGame}>
+              Play again
+            </button>
+          </div>
+        )
       )}
     </div>
   );

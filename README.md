@@ -1,14 +1,14 @@
+Webpage link to view the project online: https://kingli6.github.io/react-guess-the-number/
+
+#### Instructions on how to set the env up for running react app locally`?
+
+### A quick guide to set up a new project https://www.youtube.com/watch?v=Q9n2mLqXFpU
+
 ### Start project locally
 
 `npm start`
 
-### A quick guide to set up a new project https://www.youtube.com/watch?v=Q9n2mLqXFpU
-
-#### Instructions on how to set the env up for seeing react app locally`?
-
-Webpage link to view the project online: https://kingli6.github.io/react-guess-the-number/
-
-## <!-- -------------------------------------------------------------------
+<!-- -------------------------------------------------------------------
 
 ---
 

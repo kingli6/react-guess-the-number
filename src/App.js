@@ -1,12 +1,10 @@
 import { useState } from "react";
-import NLogic from "./nGame";
 import "./App.css";
 export default function App() {
   return (
     <div className="App">
       {
         <div>
-          <NLogic />
           <Gamelogic />
         </div>
       }

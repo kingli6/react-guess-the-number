@@ -1,11 +1,13 @@
 import { useState } from "react";
 import "./App.css";
+import CatFacts from "./CatFacts";
 export default function App() {
   return (
     <div className="App">
       {
         <div>
           <Gamelogic />
+          <CatFacts />
         </div>
       }
     </div>

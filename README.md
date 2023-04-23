@@ -1,8 +1,7 @@
 Webpage link to view the project online: https://kingli6.github.io/react-guess-the-number/
 
-
-
 <!-- -------------------------------------------------------------------
+>> npm run deploy //to deploy to github pages
 
 #### Instructions on how to set the env up for running react app locally`?
 

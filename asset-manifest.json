@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/react-guess-the-number/static/css/main.abd64e84.css",
-    "main.js": "/react-guess-the-number/static/js/main.76b557f5.js",
+    "main.js": "/react-guess-the-number/static/js/main.b04de34c.js",
     "index.html": "/react-guess-the-number/index.html",
     "main.abd64e84.css.map": "/react-guess-the-number/static/css/main.abd64e84.css.map",
-    "main.76b557f5.js.map": "/react-guess-the-number/static/js/main.76b557f5.js.map"
+    "main.b04de34c.js.map": "/react-guess-the-number/static/js/main.b04de34c.js.map"
   },
   "entrypoints": [
     "static/css/main.abd64e84.css",
-    "static/js/main.76b557f5.js"
+    "static/js/main.b04de34c.js"
   ]
 }

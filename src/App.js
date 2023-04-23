@@ -11,6 +11,7 @@ export default function App() {
     </div>
   );
 }
+
 const Gamelogic = () => {
   const [startGame, setStartGame] = useState(false);
   const [gameOver, setGameOver] = useState(false);
@@ -18,7 +19,7 @@ const Gamelogic = () => {
   const [maxAttempts, setMaxAttempts] = useState(0);
   const [number, setNumber] = useState(null);
   const [attempts, setAttempts] = useState(0);
-  const [message, setMessage] = useState("");
+  const [message, setMessage] = useState("Play guess the number!");
   //////////////////////////////////////
   const handleStart = () => {
     switch (difficulty) {
@@ -38,7 +39,7 @@ const Gamelogic = () => {
         break;
     }
     setAttempts(0);
-    setMessage("");
+    setMessage("I have it! Can you guess the number?");
     setStartGame(true);
   };
 
@@ -81,7 +82,7 @@ const Gamelogic = () => {
   return (
     <div>
       <p>-------------------------------------</p>
-      <h1 className="title">Guess the number game!</h1>
+      <h1 className="title">{message}</h1>
       {!startGame ? (
         <div>
           <h2>Choose difficulty:</h2>
@@ -133,12 +134,12 @@ const Gamelogic = () => {
             </label>
             <button type="submit">Guess</button>
           </form>
-          <p>{message}</p> {/*need to add a && logic?*/}
+          <p>{maxAttempts - attempts} attempts remaining...</p>
         </div>
       ) : (
         gameOver && (
           <div>
-            <p>{message}</p>
+            {/* <p>{message}</p> */}
             <button type="button" onClick={restartGame}>
               Play again
             </button>

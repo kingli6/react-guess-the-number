@@ -1,134 +1,189 @@
-import React, { useState } from "react";
-export default function Nlogic() {
-  const [difficulty, setDifficulty] = useState("");
-  const [number, setNumber] = useState(null);
-  const [attempts, setAttempts] = useState(0);
-  const [maxAttempts, setMaxAttempts] = useState(0);
-  const [feedback, setFeedback] = useState("");
-  const [gameOver, setGameOver] = useState(false);
-  console.log(number);
-  const handleStart = () => {
-    switch (difficulty) {
-      case "easy":
-        setNumber(Math.floor(Math.random() * 10) + 1);
-        setMaxAttempts(3);
-        break;
-      case "medium":
-        setNumber(Math.floor(Math.random() * 100) + 1);
-        setMaxAttempts(5);
-        break;
-      case "hard":
-        setNumber(Math.floor(Math.random() * 1000) + 1);
-        setMaxAttempts(10);
-        break;
-      default:
-        break;
-    }
-    setAttempts(0);
-    setFeedback("");
-    setGameOver(false);
-  };
+// import React, { useState } from "react";
+// export default function Nlogic() {
+//   const [difficulty, setDifficulty] = useState("");
+//   const [number, setNumber] = useState(null);
+//   const [attempts, setAttempts] = useState(0);
+//   const [maxAttempts, setMaxAttempts] = useState(0);
+//   const [feedback, setFeedback] = useState("");
+//   const [gameOver, setGameOver] = useState(false);
+//   console.log(number);
+//   const handleStart = () => {
+//     switch (difficulty) {
+//       case "easy":
+//         setNumber(Math.floor(Math.random() * 10) + 1);
+//         setMaxAttempts(3);
+//         break;
+//       case "medium":
+//         setNumber(Math.floor(Math.random() * 100) + 1);
+//         setMaxAttempts(5);
+//         break;
+//       case "hard":
+//         setNumber(Math.floor(Math.random() * 1000) + 1);
+//         setMaxAttempts(10);
+//         break;
+//       default:
+//         break;
+//     }
+//     setAttempts(0);
+//     setFeedback("");
+//     setGameOver(false);
+//   };
 
-  const handleGuess = (event) => {
-    event.preventDefault();
-    const guess = parseInt(event.target.elements.guess.value);
-    if (isNaN(guess)) {
-      setFeedback("Please enter a valid number.");
-    } else if (guess === number) {
-      setFeedback(
-        `Congratulations! You guessed the number ${number} in ${attempts} attempts.`
-      );
-      setGameOver(true);
-    } else {
-      setAttempts(attempts + 1);
-      if (guess > number) {
-        setFeedback("Too high. Try again.");
-      } else {
-        setFeedback("Too low. Try again.");
-      }
-      if (attempts + 1 >= maxAttempts) {
-        setGameOver(true);
-        setFeedback(
-          `Sorry, you've reached the maximum number of attempts. The number was ${number}.`
-        );
-      }
-    }
-  };
+//   const handleGuess = (event) => {
+//     event.preventDefault();
+//     const guess = parseInt(event.target.elements.guess.value);
+//     if (isNaN(guess)) {
+//       setFeedback("Please enter a valid number.");
+//     } else if (guess === number) {
+//       setFeedback(
+//         `Congratulations! You guessed the number ${number} in ${attempts} attempts.`
+//       );
+//       setGameOver(true);
+//     } else {
+//       setAttempts(attempts + 1);
+//       if (guess > number) {
+//         setFeedback("Too high. Try again.");
+//       } else {
+//         setFeedback("Too low. Try again.");
+//       }
+//       if (attempts + 1 >= maxAttempts) {
+//         setGameOver(true);
+//         setFeedback(
+//           `Sorry, you've reached the maximum number of attempts. The number was ${number}.`
+//         );
+//       }
+//     }
+//   };
 
-  const handleReset = () => {
-    setDifficulty("");
-    setNumber(null);
-    setAttempts(0);
-    setMaxAttempts(0);
-    setFeedback("");
-    setGameOver(false);
-  };
+//   const handleReset = () => {
+//     setDifficulty("");
+//     setNumber(null);
+//     setAttempts(0);
+//     setMaxAttempts(0);
+//     setFeedback("");
+//     setGameOver(false);
+//   };
 
-  return (
-    <div className="App">
-      <h1>Guess the number</h1>
-      {!gameOver ? (
-        <div>
-          <form onSubmit={handleGuess}>
-            <label>
-              Guess a number between 1 and{" "}
-              {difficulty === "easy"
-                ? "10"
-                : difficulty === "medium"
-                ? "100"
-                : "1000"}
-              :
-              <input type="number" name="guess" />
-            </label>
-            <button type="submit">Guess</button>
-          </form>
-          {feedback && <p>{feedback}</p>}
-        </div>
-      ) : (
-        <div>
-          <p>{feedback}</p>
-          {gameOver && (
-            <div>
-              <button type="button" onClick={handleReset}>
-                Play again
-              </button>
-            </div>
-          )}
-        </div>
-      )}
-      <h2>Select difficulty level:</h2>
-      <form>
-        <label>
-          <input
-            type="radio"
-            name="difficulty"
-            value="easy"
-            onChange={(event) => setDifficulty(event.target.value)}
-          />
-          Easy (1-10)
-        </label>
-        <label>
-          <input
-            type="radio"
-            name="difficulty"
-            value="medium"
-            onChange={(event) => setDifficulty(event.target.value)}
-          />
-          Medium (1-100)
-        </label>
-        <label>
-          <input
-            type="radio"
-            name="difficulty"
-            value="hard"
-            onChange={(event) => setDifficulty(event.target.value)}
-          />
-          Hard (1-1000)
-        </label>
-      </form>
-      <button type="button" disabled={!difficulty} onClick={handleStart}>
-        Start
-      </button>
-    </div>
-  );
-}
+//   return (
+//     <div className="App">
+//       <h1>Guess the number</h1>
+//       {!gameOver ? (
+//         <div>
+//           <form onSubmit={handleGuess}>
+//             <label>
+//               Guess a number between 1 and{" "}
+//               {difficulty === "easy"
+//                 ? "10"
+//                 : difficulty === "medium"
+//                 ? "100"
+//                 : "1000"}
+//               :
+//               <input type="number" name="guess" />
+//             </label>
+//             <button type="submit">Guess</button>
+//           </form>
+//           {feedback && <p>{feedback}</p>}
+//         </div>
+//       ) : (
+//         <div>
+//           <p>{feedback}</p>
+//           {gameOver && (
+//             <div>
+//               <button type="button" onClick={handleReset}>
+//                 Play again
+//               </button>
+//             </div>
+//           )}
+//         </div>
+//       )}
+//       <h2>Select difficulty level:</h2>
+//       <form>
+//         <label>
+//           <input
+//             type="radio"
+//             name="difficulty"
+//             value="easy"
+//             onChange={(event) => setDifficulty(event.target.value)}
+//           />
+//           Easy (1-10)
+//         </label>
+//         <label>
+//           <input
+//             type="radio"
+//             name="difficulty"
+//             value="medium"
+//             onChange={(event) => setDifficulty(event.target.value)}
+//           />
+//           Medium (1-100)
+//         </label>
+//         <label>
+//           <input
+//             type="radio"
+//             name="difficulty"
+//             value="hard"
+//             onChange={(event) => setDifficulty(event.target.value)}
+//           />
+//           Hard (1-1000)
+//         </label>
+//       </form>
+//       <button type="button" disabled={!difficulty} onClick={handleStart}>
+//         Start
+//       </button>
+//     </div>
+//   );
+// }
+
+// import React, { useState } from "react";
+
+// export default function Game() {
+//   const [gameStarted, setGameStarted] = useState(false);
+//   const [message, setMessage] = useState(false);
+//   const [answer, setAnswer] = useState(0);
+//   const [randomNumber, setRandomNumber] = useState(0);
+//   console.log(randomNumber);
+
+//   //Functions
+//   const submitHandler = (e) => {
+//     e.preventDefault();
+//     const formValid = +answer >= 0;
+//     if (!formValid) {
+//       return;
+//     }
+//     if (+answer === +randomNumber) {
+//       setMessage("you got it");
+//       setGameStarted(false);
+//     } else if (+answer < +randomNumber) {
+//       setMessage("too low");
+//     } else {
+//       setMessage("too high");
+//     }
+//   };
+//   //function 2
+//   const start = () => {
+//     setRandomNumber(Math.ceil(Math.random() * 10));
+//     setGameStarted(true);
+//   };
+//   if (gameStarted) {
+//     return (
+//       <div>
+//         <form onSubmit={submitHandler}>
+//           <div>
+//             <label>answer</label>
+//             <input value={answer} onChange={(e) => setAnswer(e.target.value)} />
+//           </div>
+//           <button type="submitHandler">check</button>
+//         </form>
+//         <p>{message}</p>
+//       </div>
+//     );
+//   } else {
+//     return (
+//       <div>
+//         <button type="button" onClick={start}>
+//           start
+//         </button>
+//         <p>{message}</p>
+//       </div>
+//     );
+//   }
+// }

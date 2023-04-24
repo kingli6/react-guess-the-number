@@ -1,5 +1,10 @@
 Webpage link to view the project online: https://kingli6.github.io/react-guess-the-number/
 
+### To run react project locally. 
+#### npm install
+#### npm start
+
+
 <!-- -------------------------------------------------------------------
 >> npm run deploy //to deploy to github pages
 

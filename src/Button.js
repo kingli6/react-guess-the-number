@@ -1,19 +1,44 @@
-// import { useState } from "react";
-
+// import React, { useState } from "react";
 // export default function Button() {
-//   const [diffValue, setDiffValue] = useState("level-1");
-//   const difficultyHandler = (e) => {
-//     setDiffValue(event.target.value);
+//   const [tabIndex, setTabIndex] = useState(0);
+
+//   const handleTabChange = (index) => {
+//     setTabIndex(index);
 //   };
 
 //   return (
-//     <div>
-//       <select value={value} onChange={difficultyHandler}>
-//         <option value="level-1">Level 1</option>
-//         <option value="level-2">Level 2</option>
-//         <option value="level-3">Level 3</option>
-//       </select>
-//       <button type="button">choose</button>
+//     <div className="App">
+//       <div className="Sidebar">
+//         <ul>
+//           <li>Tab 1</li>
+//           <li>Tab 2</li>
+//           <li>Tab 3</li>
+//           <li>Tab 4</li>
+//           <li>Tab 5</li>
+//         </ul>
+//       </div>
+//       <div className="Content">
+//         <Tabs selectedIndex={tabIndex} onSelect={handleTabChange}>
+//           <TabList>
+//             <Tab>One</Tab>
+//             {/* <Tab>Two</Tab> */}
+//             <Tab>Extra</Tab>
+//           </TabList>
+
+//           <TabPanel>
+//             <h2>One</h2>
+//             <p>This is the content of tab one.</p>
+//           </TabPanel>
+//           <TabPanel>
+//             <h2>Two</h2>
+//             <p>This is the content of tab two.</p>
+//           </TabPanel>
+//           <TabPanel>
+//             <h2>Extra</h2>
+//             <p>This is the content of the extra tab.</p>
+//           </TabPanel>
+//         </Tabs>
+//       </div>
 //     </div>
 //   );
 // }

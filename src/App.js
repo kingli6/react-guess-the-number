@@ -1,13 +1,26 @@
-import { useState } from "react";
 import "./App.css";
-import CatFacts from "./CatFacts";
+import { useState } from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Home } from "./pages/Home";
+import { Menu } from "./pages/Menu";
+import { Extra } from "./pages/Extra";
+import { Navbar } from "./pages/Navbar";
+
 export default function App() {
   return (
     <div className="App">
       {
-        <div>
-          <Gamelogic />
-          <CatFacts />
+        <div className="Container-1">
+          <Router>
+            <Navbar />
+            <Routes>
+              <Route path="/" element={Menu} />
+              <Route path="/home" element={<Home />} />
+              <Route path="/extra" element={<Extra />} />
+              <Route path="*" element={<h1>Page not found</h1>} />
+            </Routes>
+            <Gamelogic />
+          </Router>
         </div>
       }
     </div>

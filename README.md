@@ -3,7 +3,7 @@ Webpage link to view the project online: https://kingli6.github.io/react-guess-t
 ### To run react project locally. 
 #### npm install
 #### npm start
-
+Follow react tutorial to get started: https://youtu.be/U2Wltnv-doo
 
 <!-- -------------------------------------------------------------------
 >> npm run deploy //to deploy to github pages
